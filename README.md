@@ -88,3 +88,9 @@ Sets the `value` of an integer serial valuable called `name`.
 Returns the value of the variable `name`.
 
 Returns zero (0) if a variable of said `name` doesn't exist.
+
+## Planned Features
+
+- Add support for float, double, and string variables
+- Add support for SoftwareSerial and other HardwareSerial ports
+- Add ability to set a callback function for when the value of a variable is updated.
