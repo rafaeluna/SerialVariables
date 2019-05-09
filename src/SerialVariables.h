@@ -53,7 +53,7 @@ class Serial_Variables {
 		Serial_Variables();
 		void useHardwareSerial(HardwareSerial serial);
 		void useSoftwareSerial(SoftwareSerial serial);
-		void setAssigner(char assigner_);
+		void setAssigner(char character);
 		void setVerbose(bool flag=true);
 		void handle();
 		void addInt(String name, int value=0);

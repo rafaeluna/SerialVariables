@@ -6,7 +6,7 @@ Mode			Serial_Variables::mode = ModeNormal;
 HardwareSerial*	Serial_Variables::hardwareSerial;
 SoftwareSerial*	Serial_Variables::softwareSerial;
 char			Serial_Variables::assigner = '=';
-bool			Serial_Variables::verbose = true;
+bool			Serial_Variables::verbose = false;
 uint8_t			Serial_Variables::numberOfVariables = 0;
 var				Serial_Variables::variables[MAX_VARIABLES];
 String			Serial_Variables::buffer = "";
@@ -79,6 +79,12 @@ int Serial_Variables::getInt(String name) {
 	 * with a given name
 	 */
 	int foundIndex = findIndex(name);
+
+	if (foundIndex<0) {
+		printError("in getInt(): variable name not found");
+		return 0;
+	}
+
 	int value = variables[foundIndex].value.toInt();
 
 	if (variables[foundIndex].type != TypeInt) {
