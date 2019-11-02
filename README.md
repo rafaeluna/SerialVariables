@@ -67,7 +67,7 @@ The default value for verbosity is `false`.
 
 (Also I think it could use a better name, I think verbosity is not quite the right word).
 
-### _SerialVariables._handle() : void
+### _SerialVariables_.handle() : void
 
 Updates the internal library buffer and tries to execute commands when a message is sent.
 
@@ -79,7 +79,7 @@ Adds a new integer serial variable with a `name` and a default `value` of 0.
 
 Should only be called on `setup()`.
 
-### _SerialVariables._setInt(String name, int value) : void
+### _SerialVariables_.setInt(String name, int value) : void
 
 Sets the `value` of an integer serial valuable called `name`.
 
